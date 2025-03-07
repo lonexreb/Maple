@@ -10,6 +10,32 @@ from gen_image import load_models, generate_image, RESPONSE_TO_DIFFUSER_PROMPT
 MODEL, STEPS = None, None
 
 
+# Initialize Midnight client (replace with actual API keys)
+# midnight_client = midnight.Client(api_key="your-midnight-api-key")
+
+# Connect to LanceDB
+db = lancedb.connect("./lance_secure_db")
+
+# Embedding model
+embedding_model = OpenAIEmbeddings()
+
+# Sample document
+# doc = Document(page_content="Midnight provides privacy-preserving AI workflows.")
+
+# Generate embedding
+embedding = embedding_model.embed_query(doc.page_content)
+
+# 🔒 Encrypt embedding with Midnight before storing
+# encrypted_embedding = midnight_client.encrypt(embedding)
+
+# Store encrypted vector in LanceDB
+vector_store = db.create_table("secure_rag")
+vector_store.add({"text": doc.page_content, "embedding": encrypted_embedding})
+
+print("Stored encrypted document securely in LanceDB!")
+
+
+
 def get_doc_from_url(url):
     documents = SimpleWebPageReader(html_to_text=True).load_data([url])
     return documents
