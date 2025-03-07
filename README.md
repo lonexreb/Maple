@@ -8,7 +8,7 @@ Introducing Maple - an innovative learning companion that combines sophisticated
 By focusing on both the 'what' and 'how' of learning, Maple transforms learning from a daunting subject into an engaging journey of discovery.
 
 ## What it does
-**Smart Topic Navigation**: We break down challenging chemistry concepts into digestible pieces, building your understanding step by step.
+**Smart Topic Navigation**: We break down challenging concepts into digestible pieces, building your understanding step by step.
 **Empathetic Support**: Our advanced voice analysis technology recognizes when you're stuck, frustrated, or losing interest. Instead of just giving answers, Maple responds with the right balance of guidance and encouragement when you need it most.
 **Growth-Focused Practice**: Through interactive quizzes, you'll not only track your progress but also discover your strengths and identify areas where you can improve, making each study session more rewarding than the last.
 
@@ -16,7 +16,7 @@ By focusing on both the 'what' and 'how' of learning, Maple transforms learning 
 We build it using the following tools:
 **Hume EVI**
 Maple’s goal is to offer precise academic support while recognizing and adapting to students’ emotional states, promoting a nurturing and effective learning experience.
-Hume's EVI model powers real-time speech-to-text and emotion detection, starting when a user activates the microphone. When the microphone is turned off, the model sends the text and the top five emotions detected to Accel, which then generates a suitable response using a fine-tuned LLM. Additionally, Maple’s frontend displays a mood gauge, giving users insight into their study habits and emotional trends.
+Hume's EVI model powers real-time speech-to-text and emotion detection, starting when a user activates the microphone. When the microphone is turned off, the model sends the text and the top five emotions detected to Maple, which then generates a suitable response using a fine-tuned LLM. Additionally, Maple’s frontend displays a mood gauge, giving users insight into their study habits and emotional trends.
 
 **DataBricks**
 We ran Wolfram MathWorld with Open source RAG using DBRX, LanceDB, and LLama-index with Huggingface Embeddings to create a knowledge base for our Model to prevent hallucinations. Further we also used databrick's chat UI library to finetune and create a more effecient chat space for our platform.
